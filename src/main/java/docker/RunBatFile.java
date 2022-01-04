@@ -13,10 +13,10 @@ public class RunBatFile {
     public static void main(String[] args) {
         try {
             // File location for the bat script
-            File dir = new File("bat_scripts");
+            File dir = new File("scripts");
 
             // Command to run the bat file in the same console
-            ProcessBuilder pb = new ProcessBuilder("cmd.exe", "/C", fileName + ".bat");
+            ProcessBuilder pb = new ProcessBuilder("cmd.exe", "/C", fileName);
             pb.directory(dir);
             Process process = pb.start();
 

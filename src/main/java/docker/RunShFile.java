@@ -7,16 +7,15 @@ import java.io.InputStreamReader;
 
 public class RunShFile {
 
-    private static String fileName = "docker-data";
-    //private static String fileName = "container-data";
+    private static String fileName = "linux-change-date.sh";
 
     public static void main(String[] args) {
         try {
             // File location for the bat script
-            File dir = new File("bat_scripts");
+            File dir = new File("scripts");
 
             // Command to run the bat file in the same console
-            ProcessBuilder pb = new ProcessBuilder("/bin/bash", "-c", "linux.sh");
+            ProcessBuilder pb = new ProcessBuilder("/bin/bash", fileName);
             pb.directory(dir);
             Process process = pb.start();
 
