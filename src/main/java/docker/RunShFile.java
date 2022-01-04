@@ -5,10 +5,9 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class RunBatFile {
+public class RunShFile {
 
-    private static String fileName = "docker-data";
-    //private static String fileName = "container-data";
+    private static String fileName = "linux-change-date.sh";
 
     public static void main(String[] args) {
         try {
@@ -16,7 +15,7 @@ public class RunBatFile {
             File dir = new File("scripts");
 
             // Command to run the bat file in the same console
-            ProcessBuilder pb = new ProcessBuilder("cmd.exe", "/C", fileName);
+            ProcessBuilder pb = new ProcessBuilder("/bin/bash", fileName);
             pb.directory(dir);
             Process process = pb.start();
 
@@ -40,4 +39,5 @@ public class RunBatFile {
             e.printStackTrace();
         }
     }
+
 }
