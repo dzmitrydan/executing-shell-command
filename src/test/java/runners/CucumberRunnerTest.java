@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
         },
         monochrome = true,
         features = "src/test/resources/feature",
-        tags = "@google",
+        tags = "@win",
         glue = {""},
         objectFactory = GuiceFactory.class
 )
