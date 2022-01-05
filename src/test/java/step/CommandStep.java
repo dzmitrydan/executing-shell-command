@@ -22,4 +22,9 @@ public class CommandStep {
     public void setUpTheCurrentDate() {
         ShellCommand.executeShFile("set-current-date");
     }
+
+    @And("get CURRENT date")
+    public void getCurrentDate() {
+        ShellCommand.executeBatFile("scripts");
+    }
 }

@@ -7,8 +7,9 @@ import java.io.InputStreamReader;
 
 public class RunBatFile {
 
-    private static String fileName = "docker-data";
+    //private static String fileName = "docker-data";
     //private static String fileName = "container-data";
+    private static String fileName = "date";
 
     public static void main(String[] args) {
         try {
