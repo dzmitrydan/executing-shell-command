@@ -2,7 +2,7 @@
 ### Description
 **Executing Shell Commands with Java**
 
-To run you need a running Docker with a running docker container
+To run you need a running Docker with a running shell_command container
 
 Build tool: **Maven**
 
@@ -18,7 +18,40 @@ Build tool: **Maven**
    
    `ddvubuntu ALL=(ALL) NOPASSWD: ALL`
 
-* When working with Docker Container, it takes time to execute, so I deleted `sudo docker run 6c3c2a225947`
+* When working with Docker Container, it takes time to execute, so I deleted `sudo shell_command run 6c3c2a225947`
 * File `commands-test.txt` contains useful commands
 
+
+**Used libraries:**
+
+1. Logging **Log4j**
+  * Apache Log4j SLF4J 1.8+ Binding
+  * Apache Log4j Core
+
+
+2. Reporting **ReportPortal**
+  * Agent Java Cucumber6
+  * Logger Java Log4j
+
+
+3. Reporting
+  * Agent Java Cucumber6
+
+
+4. **Cucumber** + **JUnit 5**
+  * Cucumber JVM: Java 8
+  * Cucumber JVM: JUnit
+  * Cucumber JVM: JUnit Platform Engine
+  * JUnit Vintage Engine
+  * JUnit Jupiter Engine
+
+
+5. **Property injection**: Google Guice + Cucumber
+  * Google Guice Core Library
+  * Cucumber JVM: Guice
+  * Governator Core
+
+
+6. other
+  * Project Lombok
 

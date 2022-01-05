@@ -1,4 +1,4 @@
-package docker;
+package shell_command;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
