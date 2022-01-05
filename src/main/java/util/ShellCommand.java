@@ -27,7 +27,6 @@ public class ShellCommand {
             int exitVal = process.waitFor();
             if (exitVal == 0) {
                 ReportingUtils.info(String.valueOf(output));
-                System.exit(0);
             }
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();
@@ -37,10 +36,14 @@ public class ShellCommand {
     public static void executeBatFile(String fileName) {
 
         try {
-            File directory = new File("bat_command");
-            ProcessBuilder processBuilder = new ProcessBuilder("cmd.exe", "/C", fileName + ".bat");
-            processBuilder.directory(directory);
-            Process process = processBuilder.start();
+            // File location for the bat script
+            File dir = new File("scripts");
+
+            // Command to run the bat file in the same console
+            ProcessBuilder pb = new ProcessBuilder("cmd.exe", "/C", fileName + ".bat");
+            pb.directory(dir);
+            Process process = pb.start();
+
             StringBuilder output = new StringBuilder();
             BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
 
@@ -52,7 +55,6 @@ public class ShellCommand {
             int exitVal = process.waitFor();
             if (exitVal == 0) {
                 ReportingUtils.info(String.valueOf(output));
-                System.exit(0);
             }
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();

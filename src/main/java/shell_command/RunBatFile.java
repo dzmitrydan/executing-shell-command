@@ -9,7 +9,7 @@ public class RunBatFile {
 
     //private static String fileName = "docker-data";
     //private static String fileName = "container-data";
-    private static String fileName = "date";
+    private static String fileName = "commands";
 
     public static void main(String[] args) {
         try {
@@ -17,7 +17,7 @@ public class RunBatFile {
             File dir = new File("scripts");
 
             // Command to run the bat file in the same console
-            ProcessBuilder pb = new ProcessBuilder("cmd.exe", "/C", fileName);
+            ProcessBuilder pb = new ProcessBuilder("cmd.exe", "/C", fileName + ".bat");
             pb.directory(dir);
             Process process = pb.start();
 
