@@ -1,13 +1,15 @@
-package docker;
+package shell_command;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class RunShFile {
+public class RunBatFile {
 
-    private static String fileName = "linux-change-date.sh";
+    //private static String fileName = "docker-data";
+    //private static String fileName = "container-data";
+    private static String fileName = "commands";
 
     public static void main(String[] args) {
         try {
@@ -15,7 +17,7 @@ public class RunShFile {
             File dir = new File("scripts");
 
             // Command to run the bat file in the same console
-            ProcessBuilder pb = new ProcessBuilder("/bin/bash", fileName);
+            ProcessBuilder pb = new ProcessBuilder("cmd.exe", "/C", fileName + ".bat");
             pb.directory(dir);
             Process process = pb.start();
 
@@ -39,5 +41,4 @@ public class RunShFile {
             e.printStackTrace();
         }
     }
-
 }
