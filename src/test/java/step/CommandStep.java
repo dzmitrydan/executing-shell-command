@@ -26,4 +26,9 @@ public class CommandStep {
     public void getCurrentDate() {
         ShellCommand.executeBatFile("commands");
     }
+
+    @And("executed {word}.sh file")
+    public void executeShFile(String file) {
+        ShellCommand.executeShFile(file);
+    }
 }
