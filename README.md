@@ -2,8 +2,8 @@
 ### Description
 **Executing Shell Commands with Java**
 
-To run you need a running Docker with a running shell_command container
-Has Scenario which search log in the Linux files logs
+- To run you need a running Docker with a running shell_command container
+- Has Scenario which search log in the Linux files logs
 
 Build tool: **Maven**
 
