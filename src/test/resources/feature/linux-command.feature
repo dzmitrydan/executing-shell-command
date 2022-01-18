@@ -14,4 +14,4 @@ Feature: Linux command Test
   @logs
   Scenario: Search logs
     When executed search-linux-logs.sh file
-    Then log "log" wos found
+    Then log "Key type blacklist registered" wos found

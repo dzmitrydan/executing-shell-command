@@ -36,7 +36,7 @@ public class CommandStep {
 
     @And("log {string} wos found")
     public void findLog(String log) {
-        String foundLog = TextReader.searchStringInTheTXT("sh_scripts", "search-linux-logs.txt", "", "");
+        String foundLog = TextReader.searchStringInTheTXT("sh_scripts", "search-linux-logs.txt", "Key type", "blacklist registered");
         Assertions.assertEquals(log, foundLog);
     }
 }
