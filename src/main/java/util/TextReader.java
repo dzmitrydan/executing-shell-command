@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -19,13 +20,21 @@ public class TextReader {
 
             List<String> listFromTXT = new ArrayList<>();
             bufferedReader.lines().forEach(listFromTXT::add);
-            List<String> ListFoundText = new ArrayList<>();
-            listFromTXT.forEach(s -> ListFoundText.add(getStringByStartAndEndWords(s, startWord, endWord)));
-            list = ListFoundText.stream().filter(s -> s != null).collect(Collectors.toList());
+            List<String> listFoundText = new ArrayList<>();
+            listFromTXT.forEach(s -> listFoundText.add(getStringByStartAndEndWords(s, startWord, endWord)));
+            list = listFoundText.stream().filter(s -> s != null).collect(Collectors.toList());
 
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return list.get(0);
+    }
+
+    public static String searchStringInTheString(String textForSearch, String startWord, String endWord) {
+        List<String> listFoundText = new ArrayList<>();
+        Arrays.asList(textForSearch.split("\n"))
+                .forEach(s -> listFoundText.add(getStringByStartAndEndWords(s, startWord, endWord)));
+        List<String> list = listFoundText.stream().filter(s -> s != null).collect(Collectors.toList());
         return list.get(0);
     }
 
