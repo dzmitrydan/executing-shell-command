@@ -3,7 +3,9 @@ package step;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
+import org.junit.jupiter.api.Assertions;
 import util.ShellCommand;
+import util.TextReader;
 
 public class CommandStep {
 
@@ -30,5 +32,11 @@ public class CommandStep {
     @And("executed {word}.sh file")
     public void executeShFile(String file) {
         ShellCommand.executeShFile(file);
+    }
+
+    @And("log {string} wos found")
+    public void findLog(String log) {
+        String foundLog = TextReader.searchStringInTheTXT("sh_scripts", "search-linux-logs.txt", "", "");
+        Assertions.assertEquals(log, foundLog);
     }
 }

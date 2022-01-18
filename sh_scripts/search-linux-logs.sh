@@ -1,0 +1,1 @@
+cat /var/log/dmesg > search-linux-logs.txt
