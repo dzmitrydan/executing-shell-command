@@ -47,4 +47,22 @@ public class TextReader {
         } else return null;
     }
 
+    public static String getCommandsFromTXT(String filePath, String fileName) {
+        File fileToRead = new File(filePath + File.separator + fileName);
+        StringBuilder stringBuilder = new StringBuilder();
+
+        try (FileReader reader = new FileReader(fileToRead);
+             BufferedReader bufferedReader = new BufferedReader(reader)) {
+            bufferedReader.lines().forEach(s -> stringBuilder.append(s).append("; "));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return stringBuilder.toString().trim();
+    }
+
+    public static boolean isFileExists(String path, String fileName) {
+        File file = new File(fileName);
+        return file.exists() && !file.isDirectory();
+    }
+
 }

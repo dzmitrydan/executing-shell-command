@@ -15,3 +15,8 @@ Feature: Linux command Test
   Scenario: Search logs
     When executed search-linux-logs.sh file
     Then log "Key type blacklist registered" wos found
+
+  @file @ssh
+  Scenario: Search files
+    When open ssh connection
+    Then file install.sh is exists in the host system

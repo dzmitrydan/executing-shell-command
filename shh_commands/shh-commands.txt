@@ -1,0 +1,4 @@
+echo "hostname:"
+hostname
+echo "list files/directories:"
+ls
