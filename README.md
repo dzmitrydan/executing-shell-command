@@ -53,6 +53,10 @@ Build tool: **Maven**
   * Governator Core
 
 
+6. SSH connection
+  * JSch
+
+
 6. other
   * Project Lombok
 
