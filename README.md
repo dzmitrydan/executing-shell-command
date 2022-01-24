@@ -23,6 +23,10 @@ Build tool: **Maven**
 * File `commands-test.txt` contains useful commands
 
 
+#### SSH connection and Port forwarding
+*For a simpler example of a connection, see commit `added ssh connection`* [`2afe4ea`](https://github.com/dzmitrydan/executing-shell-command/commit/b8340b31d45dc0970e51bab37d271e908dc3b5da)
+
+
 **Used libraries:**
 
 1. Logging **Log4j**
